@@ -17,6 +17,26 @@ Copy and paste this command to Termux:
 pkg update -y && pkg install wget curl proot tar -y && wget https://raw.githubusercontent.com/tuanpham-dev/termux-ubuntu/master/ubuntu.sh && chmod +x ubuntu.sh && bash ubuntu.sh
 ```
 
+Then start Ubuntu:
+```bash
+./start-ubuntu.sh
+```
+
+Clone and run the setup to initialise Ubuntu and install sudo, XFCE Desktop, VNC server, etc.
+```bash
+apt update
+apt install git -y
+
+# clone the scripts in from this repo
+git clone https://github.com/tuanpham-dev/termux-ubuntu.git
+cd termux-ubuntu
+# make them executable
+chmod +x -R .
+
+# start and follow the instructions of the first run wizard
+./firstrun
+```
+
 ## Run
 
 ### Start Ubuntu
@@ -24,7 +44,7 @@ pkg update -y && pkg install wget curl proot tar -y && wget https://raw.githubus
 After installation, on Termux, you can execute this command to run ubuntu:
 
 ```bash
-./start-ubuntu20.sh
+./start-ubuntu.sh
 ```
 
 ### Exit Ubuntu
